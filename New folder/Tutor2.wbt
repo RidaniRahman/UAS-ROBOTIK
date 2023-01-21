@@ -1,0 +1,110 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.211216127720052 0.19997399525378812 -0.9567644164647766 1.6695148047058048
+  position 0.04061072894511483 2.0843167945074286 1.0825298635383493
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+Solid {
+  translation -0.3235939782146794 0.12498361382550066 0.04917815926163563
+  rotation -0.274122377773698 -0.8455369626006971 0.4581748213069782 -2.796287306849427
+  children [
+    DEF BALL_GEOMETRY Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0.06205571575062965 0.05966669954700286 7.867411369883895e-10
+  angularVelocity -1.1933339909400573 1.2411143150125932 1.2886480740683544
+}
+Solid {
+  translation -0.08879675781600865 0.08288669910175978 0.09342527489456731
+  rotation -0.4705673646999217 0.6821702465319931 -0.5596517756836393 2.4095091891692486
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "BOLA TANPA DEF-USE MECANISM"
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity -0.0059450105404154855 0.076984192734556 -1.6167898573338262e-16
+  angularVelocity -0.76984192734556 -0.05945010540415485 0.7055258528711156
+}
+Solid {
+  translation 0 0.01 -0.01
+  children [
+    Wall {
+      translation -0.52 8.15696e-08 0
+      rotation 0 0 1 -1.5707953071795862
+      size 1.1 0.05 0.2
+    }
+  ]
+  name "DINDING 1"
+}
+Solid {
+  translation 2.65359e-08 0.0100029 -0.01
+  rotation 0 0 1 3.14159
+  children [
+    Wall {
+      translation -0.52 8.15696e-08 0
+      rotation 0 0 1 -1.5707953071795862
+      size 1.1 0.05 0.2
+    }
+  ]
+  name "DINDING 2"
+}
+Solid {
+  translation -2.20392e-07 -6.74634e-14 -0.01
+  rotation 0 0 1 1.5708
+  children [
+    Wall {
+      translation -0.52 8.15696e-08 0
+      rotation 0 0 1 -1.5707953071795862
+      size 1 0.05 0.2
+    }
+  ]
+  name "DINDING 3"
+}
+Solid {
+  translation -3.01647e-06 0.01 -0.01
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Wall {
+      translation -0.52 8.15696e-08 0
+      rotation 0 0 1 -1.5707953071795862
+      size 1 0.05 0.2
+    }
+  ]
+  name "DINDING 4"
+}

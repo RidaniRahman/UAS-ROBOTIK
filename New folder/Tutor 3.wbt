@@ -1,0 +1,98 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.11200139288852377 -0.9317369572518729 0.3454300659787044 5.516509167883956
+  position -2.0167372837023416 -0.335346488825072 1.4269859449312716
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 2 2
+  appearance Parquetry {
+  }
+}
+WoodenBox {
+  translation 2.2397854095567733 -1.3819505845695674 0.049960760000000014
+  rotation -0.35231937922654244 -0.8670306280881013 -0.35231937922654266 1.7129956392591004
+  size 0.1 0.1 0.1
+  mass 0.2
+  locked TRUE
+}
+E-puck {
+  hidden position_0_0 394.79596316611577
+  hidden position_0_1 505.7258831660664
+  hidden linearVelocity_0 1.9331333264104003e-08 -6.608728436310408e-08 -4.687213580230794e-14
+  hidden angularVelocity_0 1.7862405876324032e-06 5.224970658830428e-07 -2.1820313452390704e-09
+  hidden rotation_1 0 -1 0 4.962937546457006
+  hidden linearVelocity_1 3.003082074126549e-08 -1.0278908164629263e-07 -2.966410683757907e-08
+  hidden angularVelocity_1 0.5432897583410183 -1.8466948752946726 2.480756795076783
+  hidden rotation_2 0 -1 0 3.862446752844065
+  hidden linearVelocity_2 8.63201161938086e-09 -2.9386051547675876e-08 2.9664059786326446e-08
+  hidden angularVelocity_2 0.5432897566267942 -1.8466948727562984 2.480756797341785
+  translation 2.192423382380696 2.3247459281792864 0.03690708719899946
+  rotation 0.7329171999299815 -0.23733010751500663 -0.6375788563885341 2.3225357905649355
+  controller "my_controller"
+}
+Solid {
+  translation 0.19708393358340742 0.2893094751656126 0.04958907968091044
+  rotation -0.5474245368804125 -0.7076293604062978 -0.4467516812640327 -1.5187444288654328
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.05
+    subdivision 2
+  }
+  physics Physics {
+  }
+  locked TRUE
+  linearVelocity 0.02975819634339565 0.044191045320462044 1.97827390377148e-16
+  angularVelocity -0.8838209064092408 0.5951639268679129 0.007433132094877698
+}
+Solid {
+  translation -0.5585684803593156 -0.7907264998408607 0.04958907968091044
+  rotation -0.4570671575753025 -0.14468739854459362 0.8775848506944679 -0.8374398072457909
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../../Pictures/ARA/red_brick_wall.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry USE BALL_GEOMETRY
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  locked TRUE
+  linearVelocity -0.11265464128346162 -0.15947668765071915 1.9872669863075254e-16
+  angularVelocity 3.189533753014383 -2.253092825669232 0.01651649203232368
+}

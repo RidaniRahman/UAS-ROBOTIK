@@ -1,0 +1,41 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/Ball.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.014759000550508895 0.999126281738549 0.03910044810551086 0.7226270993797698
+  position -1.6672092757014407 -0.04891760498443434 1.4692851005490313
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Ball {
+  hidden linearVelocity_0 -0.0013633181913572903 -0.0014471920279879734 -9.37420323791863e-07
+  hidden angularVelocity_0 0.044359623894600325 -0.04178876525577375 0.00012785850550069684
+  translation -0.30937216638515236 -0.13101171405413417 0.03241367132985427
+  rotation -0.09370108549390244 0.1327209831953475 0.9867143696110464 1.0250455338298037
+}
+E-puck {
+  hidden position_0_0 178.21373882408062
+  hidden position_0_1 209.12928837466742
+  hidden linearVelocity_0 -0.059220756240420454 -0.02126841715264323 5.660069745670769e-10
+  hidden angularVelocity_0 0.0027966049010235213 -0.007786974187409222 1.1180815078196217e-08
+  hidden rotation_1 0 1 0 2.2845502230522006
+  hidden linearVelocity_1 -0.05925970916356755 -0.021282348569291117 -1.9713843895767437e-10
+  hidden angularVelocity_1 1.0641199664809713 -2.9629845517007416 8.614366374508936e-08
+  hidden rotation_2 0 -1 0 4.499012069438515
+  hidden linearVelocity_2 -0.05925967234172987 -0.02128245152735779 1.6972667716807812e-10
+  hidden angularVelocity_2 1.064120039092877 -2.962984525629266 -7.083859270851486e-08
+  translation 0.21539956843087676 0.3611151615118316 -6.396200259998173e-05
+  rotation -0.00010163353713470892 -1.7697548400413822e-05 0.9999999946787106 -2.7968004895557175
+  controller "my_controller"
+}

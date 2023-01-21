@@ -1,0 +1,61 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.0948591522831568 -0.09121905636167349 0.9913025900221418 4.664572245347419
+  position 0.2277005240150316 1.4783456676763091 0.47503163150589406
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Solid {
+  translation 0.26684918028641563 -0.062283271626781746 0.039691729182064935
+  rotation -0.7040195843137119 -0.07946421174771641 -0.7057208116203337 -2.998582889705997
+  children [
+    DEF G0 Group {
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.3
+            radius 0.01
+          }
+        }
+        Transform {
+          translation 0.000359128 -0.00330177 0.13
+          rotation 0.1861549560634332 0.694746836024829 0.694746836024829 2.7735
+          children [
+            DEF Globe Shape {
+              appearance PBRAppearance {
+              }
+              geometry Sphere {
+                radius 0.04
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 -0.15
+          children [
+            USE Globe
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject USE G0
+  physics Physics {
+  }
+  linearVelocity 0.00024261133513213786 -0.010526676395549347 -6.952223491593976e-05
+  angularVelocity 0.26297243804546305 0.006060866573634834 -9.880331449301657e-06
+}
